@@ -1,0 +1,1646 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Miễn dịch vững vàng</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            user-select: none;
+        }
+
+        img:focus {
+            outline: none;
+        }
+
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .hero {
+            max-width: 100vw;
+            min-height: 34.6875vw; /* 666px trên 1920px */
+            height: auto;
+            background: url('images/header.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            object-fit: contain;
+            color: white;
+        }
+
+        .BuyandEvent {
+            position: absolute;
+            right: 16vw;
+            top: 20vw;
+            width: 26vw;
+            height: 6vw;
+            object-fit: contain;
+            z-index: 10;
+            transition: transform 0.3s ease;
+        }
+
+        .btnAtlTop {
+            position: absolute;
+            object-fit: contain;
+            z-index: 10;
+            top: 34.6875vw;
+            left: 48.5%;
+            width: 3vw;
+            height: 3vw
+        }
+
+        .bannerHeader {
+            position: absolute;
+            left: 14vw;
+            top: 4vw;
+            width: 32vw;
+            height: 30vw;
+            object-fit: contain;
+            z-index: 10;
+            transition: transform 0.3s ease;
+        }
+
+        .logo {
+            position: absolute;
+            right: 23vw;
+            top: 0.45vw;
+            width: 8.85vw;
+            height: 6.4vw;
+            object-fit: contain;
+            z-index: 10;
+        }
+
+        .fistChild {
+            position: absolute;
+            left: 8vw;
+            top: 54vw;
+            width: 7.78vw;
+            height: 10.99vw;
+            object-fit: contain;
+            z-index: 10;
+            animation: upDown 2s ease-in-out infinite;
+        }
+
+        .second_child {
+            position: absolute;
+            right: 41.5vw;
+            top: 45vw;
+            width: 15.73vw;
+            height: 20.104vw;
+            object-fit: contain;
+            z-index: 10;
+            animation: upDown 2.5s ease-in-out infinite;
+        }
+
+        .bottom_child {
+            position: absolute;
+            right: 45vw;
+            top: 67vw;
+            width: 9.48vw;
+            height: 9.48vw;
+            object-fit: contain;
+            z-index: 10;
+            animation: upDown 3.5s ease-in-out infinite;
+        }
+
+        @keyframes upDown {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-1.562vw);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .btn_ByNow {
+            position: absolute;
+            left: 43vw;
+            width: 14vw;
+            height: 5vw;
+            top: 122vw;
+            object-fit: contain;
+            z-index: 10;
+            transition: transform 0.4s ease;
+        }
+
+        .btn_ByNow:hover {
+            transform: scale(1.05);
+        }
+
+
+        .btn_Alt_section {
+            position: absolute;
+            object-fit: contain;
+            z-index: 10;
+            top: 68vw;
+            right: 20vw;
+            width: 3vw;
+            height: 3vw
+        }
+
+        .btn_Alt_features {
+            position: absolute;
+            object-fit: contain;
+            z-index: 10;
+            top: 128vw;
+            left: 48.5%;
+            width: 3vw;
+            height: 3vw
+        }
+
+        .btn_Alt_event {
+            position: absolute;
+            object-fit: contain;
+            z-index: 10;
+            top: 90.5vw;
+            left: 48.5%;
+            width: 3vw;
+            height: 3vw
+        }
+
+        .btn_Alt_end {
+            position: absolute;
+            object-fit: contain;
+            z-index: 10;
+            top: 138vw;
+            left: 48.5%;
+            width: 3vw;
+            height: 3vw
+        }
+
+        .milk {
+            position: absolute;
+            right: 20vw;
+            top: 92vw;
+            width: 24vw;
+            height: 32vw;
+            object-fit: contain;
+            z-index: 10;
+            transition: transform 0.4s ease;
+        }
+
+        .milk:hover {
+            transform: scale(1.05);
+        }
+
+        .BuyandEvent:hover {
+            transform: scale(1.05);
+        }
+
+        .bannerHeader:hover {
+            transform: scale(1.05);
+        }
+
+
+        .information {
+            max-width: 100vw;
+            min-height: 47.6vw;
+            height: auto;
+            background: url('images/bg_body1.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            object-fit: contain;
+            color: white;
+        }
+
+        .section {
+            max-width: 100vw;
+            min-height: 47.13vw;
+            height: auto;
+            background: url('images/bg_body2.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            object-fit: contain;
+        }
+
+        .event {
+            max-width: 100vw;
+            min-height: 42vw;
+            height: auto;
+            background: url('images/bg_body4.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            object-fit: contain;
+        }
+
+        .event_double_bonus {
+            position: absolute;
+            right: 48vw;
+            width: 36vw;
+            height: 26vw;
+            object-fit: contain;
+            top: 242vw;
+            transition: transform 0.3s ease;
+        }
+
+        .swimming_goggles {
+            position: absolute;
+            right: 12vw;
+            top: 245vw;
+            width: 33.5vw;
+            height: 24vw;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .swimming_buoy {
+            top: 215vw;
+            position: absolute;
+            right: 14vw;
+            width: 35vw;
+            height: 33vw;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+
+        }
+
+        .swimming_buoy:hover {
+            transform: scale(1.05);
+        }
+
+        .swimming_goggles:hover {
+            transform: scale(1.05);
+        }
+
+        .event_double_bonus:hover {
+            transform: scale(1.05);
+        }
+
+        .end {
+            max-width: 100vw;
+            min-height: 56.61vw;
+            height: auto;
+            background: url('images/bg_body5.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            object-fit: contain;
+        }
+
+        .btn_BuyWeb {
+            top: 282vw;
+            position: absolute;
+            right: 26vw;
+            width: 13.489vw;
+            height: 3.5vw;
+            object-fit: contain;
+            z-index: 10;
+            transition: transform 0.3s ease;
+        }
+
+        .btn_BuyAgent {
+            top: 282vw;
+            position: absolute;
+            right: 42vw;
+            width: 13.489vw;
+            height: 3.5vw;
+            object-fit: contain;
+            z-index: 10;
+            transition: transform 0.3s ease;
+
+        }
+
+        .btn_BuyShopee {
+            top: 282vw;
+            position: absolute;
+            right: 58vw;
+            width: 13.489vw;
+            height: 3.5vw;
+            object-fit: contain;
+            z-index: 10;
+            transition: transform 0.3s ease;
+
+        }
+
+        .btn_BuyShopee:hover {
+            transform: scale(1.05);
+        }
+
+        .btn_BuyAgent:hover {
+            transform: scale(1.05);
+        }
+
+        .btn_BuyWeb:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            max-width: 100vw;
+            min-height: 45.7vw;
+            height: auto;
+            background: url('images/bg_body6.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            color: white;
+            object-fit: contain;
+            position: relative;
+        }
+
+        .btn_ArrowLeft {
+            max-width: 4vw;
+            max-height: 4vw;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: none;
+            background-color: white;
+            border-radius: 50%;
+            cursor: pointer;
+
+        }
+
+        .btn_ArrowLeft:hover {
+            transform: scale(1.05);
+        }
+
+        .btn_ArrowRight {
+            border: none;
+            background-color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            max-width: 4vw;
+            max-height: 4vw;
+            transform: rotate(180deg);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn_ArrowRight:hover {
+            transform: rotate(180deg) scale(1.05);
+        }
+
+        .btnSlider {
+            width: 96vw;
+            position: absolute;
+            display: flex;
+            object-fit: contain;
+            flex-direction: row;
+            top: 22vw;
+            left: 1.7vw;
+            justify-content: space-between;
+        }
+
+        .displayNone {
+            opacity: 0;
+            display: none;
+        }
+
+        /* Retina - ảnh 2x */
+        @media (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .hero {
+                background-image: url('images/header@2x.webp');
+            }
+
+            .information {
+                background-image: url('images/bg_body1@2x.webp');
+            }
+
+            .section {
+                background-image: url('images/bg_body2@2x.webp');
+            }
+
+            .features {
+                background-image: url('images/bg_body3@2x.webp');
+            }
+
+            .event {
+                background-image: url('images/bg_body4@2x.webp');
+            }
+
+            .end {
+                background-image: url('images/bg_body5@2x.webp');
+            }
+
+            .footer {
+                background-image: url('images/bg_body6@2x.webp');
+            }
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .features {
+            background: url('./images/bg_body3.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            min-height: 94vw;
+            height: auto;
+            max-width: 100vw;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: center;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .slider img {
+            width: 33.33%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .slider-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            height: 42vw;
+            max-width: 89.5vw;
+            margin-left: 2.55vw;
+            position: absolute;
+            top: 8vw;
+            left: 2vw;
+        }
+
+        .slider-containerCT {
+            position: absolute;
+            top: 1.5vw;
+            left: 0;
+            display: flex;
+            max-width: 38vw;
+            height: 37.6vw;
+            object-fit: cover;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        #sliderTrack {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 1.4vw;
+            max-width: 89vw;
+            object-fit: cover;
+        }
+
+        .img_review_CT {
+            position: absolute;
+            top: 54vw;
+            left: 4vw;
+            display: flex;
+            max-width: 38vw;
+            height: 37.6vw;
+            object-fit: cover;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .ct2 {
+            left: 34vw
+        }
+
+        .ct3 {
+            left: 64vw
+        }
+
+        .img_review {
+            display: flex;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            max-width: 38vw;
+            height: 37.6vw;
+            object-fit: cover;
+            flex-shrink: 0;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .img_review:last-child {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+
+        .modal-close:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .textBottom {
+            text-decoration: none;
+            font-size: 1vw;
+            font-family: Lato,
+            sans-serif;
+            font-weight: bold;
+            color: #FFFFFF;
+            margin-bottom: 7.1vw;
+            margin-left: 27vw;
+        }
+
+        .textBottom1 {
+            text-decoration: none;
+            font-size: 1vw;
+            font-family: Lato,
+            sans-serif;
+            font-weight: bold;
+            color: #FFFFFF;
+            margin-bottom: 7.1vw;;
+            margin-left: 8.5vw;
+
+        }
+
+        .textBottom2 {
+            text-decoration: none;
+            font-size: 1vw;
+            font-family: Lato,
+            sans-serif;
+            font-weight: bold;
+            color: #FFFFFF;
+            margin-bottom: 7.1vw;
+            margin-left: 8vw;
+        }
+
+        .content {
+            text-align: left;
+            bottom: 13vw;
+            position: absolute;;
+            max-height: 40vw;
+            width: 54vw;
+            padding: 1.5625vw;
+            line-height: 1.4;
+            font-size: 1vw;
+            font-family: "Montserrat Light", serif;
+            margin-left: 23vw;
+
+        }
+
+        @media (max-width: 1024px) {
+            .hero {
+                min-height: 36.6875vw;
+            }
+
+            .information {
+                min-height: 48.6vw;
+            }
+
+            .section {
+                min-height: 47.13vw;
+            }
+
+            .milk {
+                right: 19vw;
+                top: 95vw;
+            }
+
+            .btn_ByNow {
+                top: 125vw
+            }
+
+            .event_double_bonus {
+                top: 245vw;
+            }
+
+            .swimming_goggles {
+                top: 247vw;
+            }
+
+            .swimming_buoy {
+                top: 217vw;
+            }
+
+            .btn_BuyWeb {
+                top: 284vw;
+            }
+
+            .btn_BuyAgent {
+                top: 284vw;;
+
+            }
+
+            .btn_BuyShopee {
+                top: 284vw;
+
+            }
+
+            .img_review_CT {
+                left: 4vw;
+            }
+
+            .ct2 {
+                left: 34vw
+            }
+
+            .ct3 {
+                left: 64vw
+            }
+
+            .BuyandEvent {
+                right: 16vw;
+                top: 21vw;
+                width: 22.1vw;
+                height: 4vw;
+            }
+
+            .btnAtlTop {
+                top: 36.6875vw;
+            }
+
+            .hero, .features, footer {
+                background-size: cover;
+                background-position: center center;
+            }
+
+            .btn_Alt_section {
+                top: 71vw;
+            }
+
+            .btn_Alt_features {
+                top: 131vw;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            .img_review_CT {
+                left: 4vw;
+            }
+
+            .ct2 {
+                left: 34vw
+            }
+
+            .ct3 {
+                left: 64vw
+
+            }
+
+            .BuyandEvent {
+                right: 18vw;
+                top: 23vw;
+                width: 22.1vw;
+                height: 4vw;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .features h2, .testimonials h2 {
+                font-size: 2rem;
+            }
+
+            .hero, .features, footer {
+                background-size: cover;
+                background-position: center 20%;
+            }
+
+            .textBottom {
+                padding-left: 0.45vw;
+            }
+
+            .textBottom1 {
+                padding-left: 0.12vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .img_review_CT {
+                left: 19.8vw;
+            }
+
+            .ct2 {
+                left: 40.15vw
+            }
+
+            .ct3 {
+                left: 60.25vw
+            }
+
+            .hero {
+                height: 171vw;
+                background: url('images/bg_body_mb1@2x.webp');
+            }
+
+            .logo {
+                position: absolute;
+                right: 36vw;
+                top: 6vw;
+                width: 24vw;
+                height: 16vw;
+                object-fit: contain;
+                z-index: 10;
+            }
+
+            .bannerHeader {
+                left: 2vw;
+                top: 54vw;
+                width: 91.66vw;
+                height: 87.5vw;
+                object-fit: contain;
+                position: absolute;
+            }
+
+            .BuyandEvent {
+                right: 11vw;
+                top: 142vw;
+                width: 72vw;
+                height: 30vw;
+            }
+
+            .btnAtlTop {
+                top: 172vw;
+                left: 48%;
+                width: 10vw;
+                height: 10vw
+            }
+
+            .information {
+                margin-top: -2vw;
+                min-height: 413.95vw;
+                background: url('images/bg_body_mb2.webp');
+                max-width: 100vw;
+                height: auto;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                object-fit: contain;
+                color: white;
+            }
+
+            .fistChild {
+                left: 2vw;
+                top: 230vw;
+                width: 20vw;
+                height: 20vw;
+            }
+
+            .second_child {
+                right: 4vw;
+                top: 195vw;
+                width: 32vw;
+                height: 32vw;
+            }
+
+            .bottom_child {
+                left: 68vw;
+                top: 235vw;
+                width: 24vw;
+                height: 24vw;
+            }
+
+            .section {
+                margin-top: -65vw;
+                background: transparent;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: white;
+                overflow: auto;
+                z-index: 0;
+            }
+
+            .milk {
+                right: 27vw;
+                top: 492vw;
+                width: 46vw;
+                height: 60vw;
+            }
+
+            .event_double_bonus {
+                top: 740vw;
+            }
+
+            .swimming_goggles {
+                top: 740vw;
+            }
+
+            .swimming_buoy {
+                top: 740vw;
+            }
+
+            .btn_BuyWeb {
+                top: 284vw;
+            }
+
+            .btn_BuyAgent {
+                top: 284vw;;
+
+            }
+
+            .btn_BuyShopee {
+                top: 284vw;
+
+            }
+
+            .features {
+                background: url('./images/bg_body_mb3@2x.webp');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                color: white;
+                min-height: 267.03vw;
+                height: auto;
+                max-width: 100vw;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                align-items: center;
+            }
+
+            .modal-close {
+                top: 10px;
+                right: 10px;
+                padding: 0.3rem 0.8rem;
+                font-size: 1rem;
+            }
+
+            .slider-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                height: 105vw;
+                max-width: 77vw;
+                position: absolute;
+                top: 22vw;
+                left: 6vw;
+
+            }
+
+            #sliderTrack {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                gap: 1.4vw;
+                max-width: 77vw;
+                object-fit: cover;
+            }
+
+            .img_review {
+                display: flex;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                max-width: 75vw;
+                height: auto;
+                object-fit: cover;
+                flex-shrink: 0;
+                cursor: pointer;
+                position: relative;
+            }
+
+            .btn_ArrowLeft {
+                max-width: 8vw;
+                max-height: 8vw;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+                border: none;
+                background-color: white;
+                border-radius: 50%;
+                cursor: pointer;
+
+            }
+
+            .btnSlider {
+                width: 93vw;
+                position: absolute;
+                display: flex;
+                object-fit: contain;
+                flex-direction: row;
+                top: 55vw;
+                left: 3.5vw;
+                justify-content: space-between;
+            }
+
+            .btn_ArrowLeft:hover {
+                transform: scale(1.05);
+            }
+
+            .btn_ArrowRight {
+                border: none;
+                background-color: white;
+                border-radius: 50%;
+                cursor: pointer;
+                max-width: 8vw;
+                max-height: 8vw;
+                transform: rotate(180deg);
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            #sliderTrackCT {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                gap: 1.4vw;
+                max-width: 77vw;
+                object-fit: cover;
+            }
+
+            .slider-containerCT {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                height: 105vw;
+                max-width: 77vw;
+                position: absolute;
+                top: 146vw;
+                left: 8vw;
+            }
+
+            .img_review_CT {
+                display: flex;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                max-width: 75vw;
+                height: auto;
+                object-fit: cover;
+                flex-shrink: 0;
+                cursor: pointer;
+                position: relative;
+                left: 0;
+                top: 0;
+            }
+
+            .event {
+                max-width: 100vw;
+                min-height: 314.16vw;
+                height: auto;
+                background: url('images/bg_body_mb4@2x.webp');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: white;
+                object-fit: contain;
+            }
+
+            .hero-content {
+                top: 860vw;
+                width: 100vw;
+                height: auto;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                object-fit: cover;
+                gap: 10vw;
+            }
+
+            .event_double_bonus {
+                position: relative;
+                left: 1.5vw;
+                width: 91.67vw;
+                height: auto;
+                top: auto;
+                margin-top: 15vw;
+            }
+
+            .swimming_goggles {
+                position: relative;
+                left: 1.5vw;
+                width: 91.67vw;
+                height: auto;
+                top: auto;
+            /
+            }
+
+            .swimming_buoy {
+                position: relative;
+                left: -4.8vw;
+                width: 95vw;
+                height: 90vw;
+                top: -25vw;
+            }
+
+            .end {
+                margin-top: -60vw;
+                max-width: 100vw;
+                min-height: 137.7vw;
+                height: auto;
+                background: url('images/bg_body_mb5@2x.webp');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: white;
+                object-fit: contain;
+            }
+
+            .btn_BuyWeb {
+                top: 1135vw;
+                right: 33vw;
+                width: 30vw;
+                height: 8vw;
+                object-fit: contain;
+                z-index: 10;
+                transition: transform 0.3s ease;
+            }
+
+            .btn_BuyAgent {
+                top: 1124vw;
+                right: 33vw;
+                width: 30vw;
+                height: 8vw;
+                object-fit: contain;
+                z-index: 10;
+                transition: transform 0.3s ease;
+
+            }
+
+            .btn_BuyShopee {
+                top: 1113vw;
+                right: 33vw;
+                width: 30vw;
+                height: 8vw;
+                object-fit: contain;
+                z-index: 10;
+                transition: transform 0.3s ease;
+
+            }
+
+            .footer {
+                max-width: 100vw;
+                min-height: 100vw;
+                height: auto;
+                background: url('images/bg_body_mb6@2x.webp');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                align-items: flex-end;
+                text-align: center;
+                color: white;
+                object-fit: contain;
+                position: relative;
+            }
+
+            .textBottom {
+                text-decoration: none;
+                font-size: 2vw;
+                font-family: Lato,
+                sans-serif;
+                font-weight: bold;
+                color: #FFFFFF;
+                margin-bottom: 13.5vw;
+                margin-left: 18vw;
+            }
+
+            .textBottom1 {
+                text-decoration: none;
+                font-size: 2vw;
+                font-family: Lato,
+                sans-serif;
+                font-weight: bold;
+                color: #FFFFFF;
+                margin-bottom: 13.5vw;
+                margin-left: 12.5vw;
+            }
+
+            .textBottom2 {
+                text-decoration: none;
+                font-size: 2vw;
+                font-family: Lato,
+                sans-serif;
+                font-weight: bold;
+                color: #FFFFFF;
+                margin-bottom: 13.5vw;
+                margin-left: 11.5vw;
+            }
+
+            .hero, .features, footer {
+                background-size: cover;
+                background-position: center 10%;
+            }
+
+            .displayNone {
+                opacity: 1;
+                display: flex;
+            }
+
+            .btn_Alt_section {
+                position: absolute;
+                object-fit: contain;
+                z-index: 10;
+                top: 360vw;
+                right: 43vw;
+                width: 10vw;
+                height: 10vw;
+            }
+
+            .btn_Alt_features {
+                position: absolute;
+                object-fit: contain;
+                z-index: 10;
+                top: 560vw;
+                left: 46%;
+                width: 10vw;
+                height: 10vw;
+            }
+
+            .btn_Alt_event {
+                position: absolute;
+                object-fit: contain;
+                z-index: 10;
+                top: 252.5vw;
+                left: 45.5%;
+                width: 10vw;
+                height: 10vw;
+            }
+
+            .btn_Alt_end {
+                position: absolute;
+                object-fit: contain;
+                z-index: 10;
+                top: 524vw;
+                left: 45%;
+                width: 10vw;
+                height: 10vw;
+            }
+
+            .btnAtlTop {
+                left: 45vw;
+            }
+
+            .btn_ByNow {
+                position: absolute;
+                left: 35vw;
+                width: 36vw;
+                height: 10vw;
+                top: 550vw;
+            }
+
+            .content {
+                text-align: left;
+                bottom: 33.5vw;
+                position: absolute;;
+                max-height: 35vw;
+                width: 70vw;
+                padding: 1.5625vw;
+                line-height: 1.4;
+                font-size: 2vw;
+                font-family: "Montserrat Light", serif;
+                margin-left: 16vw;
+            }
+        }
+    </style>
+</head>
+<body>
+<section class="hero" id="home">
+    <a href="https://doppelherz.vn/">
+        <img src="./icon/icon_home.svg" alt="logo" class="logo"/>
+    </a>
+    <a
+            href="https://doppelherz.vn/san-pham/tang-suc-de-khang/kinder-immune-syrup/"
+    >
+        <img
+                src="images/event_header.webp"
+                srcset="images/event_header@2x.webp"
+                alt="bannerHeader"
+                class="bannerHeader"
+        />
+    </a>
+    <a href="https://doppelherz.vn/san-pham/tang-suc-de-khang/kinder-immune-syrup/">
+        <img
+                src="images/btn_BuyandEvent@2x.webp"
+                alt="BuyandEvent"
+                class="BuyandEvent"
+        />
+    </a>
+    <a href="#information">
+        <img class="btnAtlTop" src="icon/icon_down.svg" alt="icon_down"/>
+    </a>
+</section>
+<section class="information" id="information">
+    <img src="images/fistChild@2x.webp" alt="fistChild" class="fistChild"/>
+    <img
+            src="images/second_child@2x.webp"
+            alt="second_child"
+            class="second_child"
+    />
+    <img
+            src="images/bottom_child@2x.webp"
+            alt="bottom_child"
+            class="bottom_child"
+    />
+    <a href="#section">
+        <img src="icon/icon_down.svg" class="btn_Alt_section" alt="icon_down"/>
+    </a>
+</section>
+<section class="section" id="section">
+    <a
+            href="https://doppelherz.vn/san-pham/tang-suc-de-khang/kinder-immune-syrup/"
+    >
+        <img src="images/milk@2x.webp" alt="milk" class="milk"/>
+    </a>
+    <a
+            href="https://doppelherz.vn/san-pham/tang-suc-de-khang/kinder-immune-syrup/"
+    >
+        <img src="./images/btn_ByNow@2x.webp" alt="milk" class="btn_ByNow"/>
+    </a>
+    <a href="#features">
+        <img
+                src="icon/icon_down.svg"
+                class="btn_Alt_features"
+                alt="icon_down"
+        />
+    </a>
+</section>
+
+<section class="features" id="features">
+    <div class="slider-container">
+        <div id="sliderTrack">
+            <img
+                    class="img_review"
+                    src="images/reviewthum1@2x.webp"
+                    data-full="images/review1@3x.webp"
+                    alt="review1"
+            />
+            <img
+                    class="img_review"
+                    src="images/reviewthum2@2x.webp"
+                    data-full="images/review2@3x.webp"
+                    alt="review2"
+            />
+            <img
+                    class="img_review"
+                    src="images/reviewthum3@2x.webp"
+                    data-full="images/review3@3x.webp"
+                    alt="review3"
+            />
+            <img
+                    class="img_review"
+                    src="images/reviewthum4@2x.webp"
+                    data-full="images/review5@3x.webp"
+                    alt="review5"
+            />
+            <img
+                    class="img_review"
+                    src="images/reviewthum5@2x.webp"
+                    data-full="images/review6@3x.webp"
+                    alt="review6"
+            />
+        </div>
+    </div>
+    <div class="slider-containerCT">
+        <div id="sliderTrackCT">
+            <img
+                    class="img_review_CT"
+                    src="images/thumb_chungnhan1@2x.webp"
+                    data-full="images/ChungNhanB@3x.webp"
+                    alt=""
+                    onclick="openModal(this.dataset.full)"
+            />
+            <img
+                    class="img_review_CT ct2"
+                    src="images/thumb_chungnhan2@2x.webp"
+                    data-full="images/ChungNhanA@3x.webp"
+                    alt=""
+                    onclick="openModal(this.dataset.full)"
+            />
+            <img
+                    class="img_review_CT ct3"
+                    src="images/thumb_chungnhan3@2x.webp"
+                    data-full="images/ChungNhanC@3x.webp"
+                    alt=""
+                    onclick="openModal(this.dataset.full)"
+            />
+        </div>
+    </div>
+
+    <div class="btnSlider">
+        <img
+                src="images/btn_ArrowLeft.webp"
+                alt="btn_ArrowLeft"
+                class="btn_ArrowLeft"
+                onclick="prevSlide()"
+        />
+        <img
+                src="images/btn_ArrowLeft.webp"
+                alt="btn_ArrowRight"
+                class="btn_ArrowRight"
+                onclick="nextSlide()"
+        />
+    </div>
+    <div class="displayNone btnSlider" style="top: 180vw">
+        <img
+                src="images/btn_ArrowLeft.webp"
+                alt="btn_ArrowLeft"
+                class="btn_ArrowLeft"
+                onclick="prevSlideCT()"
+        />
+        <img
+                src="images/btn_ArrowLeft.webp"
+                alt="btn_ArrowRight"
+                class="btn_ArrowRight"
+                onclick="nextSlideCT()"
+        />
+    </div>
+    <a href="#event">
+        <img class="btn_Alt_event" src="icon/icon_down.svg" alt="icon_down"/>
+    </a>
+    <a href="#end">
+        <img class="btn_Alt_end" src="icon/icon_down.svg" alt="icon_down"/>
+    </a>
+</section>
+
+<section class="event" id="event">
+    <div class="hero-content">
+        <a
+                href="https://doppelherz.vn/san-pham/tang-suc-de-khang/kinder-immune-syrup/"
+        >
+            <img
+                    src="images/event_double_bonus@2x.webp"
+                    alt=""
+                    class="event_double_bonus"
+            />
+        </a>
+        <a
+                href="https://doppelherz.vn/san-pham/tre-em/thuc-pham-bao-ve-suc-khoe-kinder-optima/"
+        >
+            <img
+                    src="images/swimming_goggles@2x.webp"
+                    alt=""
+                    class="swimming_goggles"
+            />
+        </a>
+        <a
+                href="https://doppelherz.vn/san-pham/bo-nao/thuc-pham-bao-ve-suc-khoe-doppelherz-aktiv-kinder-omega-3-syrup/"
+        >
+            <img
+                    src="images/swimming_buoy@2x.webp"
+                    alt=""
+                    class="swimming_buoy"
+            />
+        </a>
+    </div>
+</section>
+
+<section class="end" id="end">
+    <div>
+        <a href="https://shopee.vn/doppelherzvietnam?fbclid">
+            <img
+                    src="images/btn_BuyShopee@2x.webp"
+                    alt=""
+                    class="btn_BuyShopee"
+            />
+        </a>
+        <a href="https://doppelherz.vn/he-thong-phan-phoi/">
+            <img src="images/btn_BuyWeb@2x.webp" alt="" class="btn_BuyAgent"/>
+        </a>
+        <a
+                href="https://doppelherz.vn/mien-dich-vung-vang-he-tran-nang-luong-cung-doppelherz/"
+        >
+            <img src="images/btn_BuyWeb@2x.webp" alt="" class="btn_BuyWeb"/>
+        </a>
+    </div>
+</section>
+<footer class="footer" id="contact">
+    <div class="content">
+        <p><strong>Doppelherz</strong> là thương hiệu đại diện cho “truyền thống, tri thức và kinh nghiệm lâu đời” của
+            tập đoàn <strong>Queisser Pharma</strong> (CHLB Đức). Hơn 125 năm phát triển, đến nay Doppelherz đã trở
+            thành thương hiệu dẫn đầu trong lĩnh vực chăm sóc sức khỏe. Các sản phẩm thực phẩm chức năng của hãng không
+            chỉ chinh phục thị phần số 1 tại Đức trong nhiều năm liên tục, mà còn dẫn đầu thị trường tại nhiều quốc gia
+            khác trên thế giới.</p>
+        <br>
+        <p>Với công thức bào chế đa dạng, chủ yếu từ chiết xuất thảo mộc – vitamin – khoáng chất,
+            <strong>Doppelherz</strong> giúp chăm sóc sức khỏe cho cả gia đình và mang lại cuộc sống năng động khỏe
+            mạnh.</p>
+        <br>
+        <p>Tại thị trường Việt Nam chúng tôi đã xây dựng được hệ thống phân phối rộng khắp trên toàn quốc. Với sứ mệnh
+            cao cả ngày càng gia tăng giá trị thị trường, chúng tôi đang vững bước tiến tới trở thành thương hiệu dẫn
+            đầu ngành hàng TPCN và thuốc OTC nhập khẩu tại thị trường Việt Nam.</p>
+    </div>
+    <a style="text-decoration: none" href="https://doppelherz.vn">
+        <p class="textBottom">doppelherz.vn</p>
+    </a>
+    <p class="textBottom1">1801770</p>
+    <a
+            style="text-decoration: none"
+            href="https://zalo.me/4609946806172836027"
+    >
+        <p class="textBottom2">Doppelherz Vietnam Official</p>
+    </a>
+</footer>
+
+<div class="modal" id="imageModal">
+    <button class="modal-close" onclick="closeModal()">X</button>
+    <img src="" id="modalImage" alt=""/>
+</div>
+
+<script>
+    const thumbnails = document.querySelectorAll("#sliderTrack .img_review");
+    const thumbnailsCT = document.querySelectorAll(
+        "#sliderTrackCT .img_review_CT"
+    );
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+
+    thumbnails.forEach((thumb) => {
+        thumb.addEventListener("click", () => {
+            modalImage.src = thumb.dataset.full;
+            modal.style.display = "flex";
+        });
+    });
+
+    thumbnailsCT.forEach((thumb) => {
+        thumb.addEventListener("click", () => {
+            modalImage.src = thumb.dataset.full;
+            modal.style.display = "flex";
+        });
+    });
+
+    function openModal(src) {
+        modalImage.src = src;
+        modal.style.display = "flex";
+    }
+
+    function closeModal() {
+        modal.style.display = "none";
+        modalImage.src = "";
+    }
+
+    // Slider for first track (img_review)
+    let currentIndex = 0;
+    const slider = document.getElementById("sliderTrack");
+    const totalItems = slider.children.length;
+    const visibleItems = 3;
+
+    // Slider for second track (img_review_CT)
+    let currentIndexCT = 0;
+    const sliderCT = document.getElementById("sliderTrackCT");
+    const totalItemsCT = sliderCT.children.length;
+
+    function updateSlider() {
+        let offset;
+        if (window.innerWidth <= 480) {
+            offset = -(currentIndex * 100);
+            slider.style.transform = `translateX(${offset}%)`;
+        } else {
+            offset = -(currentIndex * (100 / visibleItems));
+            slider.style.transform = `translateX(${offset}%)`;
+        }
+    }
+
+    function updateSliderCT() {
+        let offset;
+        if (window.innerWidth <= 480) {
+            offset = -(currentIndexCT * 100);
+            sliderCT.style.transform = `translateX(${offset}%)`;
+        }
+    }
+
+    function nextSlide() {
+        if (window.innerWidth <= 480) {
+            if (currentIndex < totalItems - 1) {
+                currentIndex++;
+            }
+        } else {
+            if (currentIndex < totalItems - visibleItems) {
+                currentIndex++;
+            }
+        }
+        updateSlider();
+    }
+
+    function prevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        }
+        updateSlider();
+    }
+
+    function nextSlideCT() {
+        if (window.innerWidth <= 480) {
+            if (currentIndexCT < totalItemsCT - 1) {
+                currentIndexCT++;
+            }
+        }
+        updateSliderCT();
+    }
+
+    function prevSlideCT() {
+        if (currentIndexCT > 0) {
+            currentIndexCT--;
+        }
+        updateSliderCT();
+    }
+
+    // Initialize both sliders
+    updateSlider();
+    updateSliderCT();
+
+    // Make sure the sliders are positioned correctly on load
+    window.addEventListener("load", function () {
+        updateSlider();
+        updateSliderCT();
+    });
+
+    // Update sliders on window resize
+    window.addEventListener("resize", function () {
+        updateSlider();
+        updateSliderCT();
+    });
+</script>
+</body>
+</html>
