@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<link rel="icon" href="./icon/favicon.ico" type="image/x-icon">
-	<title>Miễn dịch vững vàng, hè tràn năng lượng</title>
+    <link rel="icon" href="./icon/favicon.ico" type="image/x-icon">
+    <title>Miễn dịch vững vàng, hè tràn năng lượng</title>
     <style>
         * {
             margin: 0;
@@ -720,7 +720,7 @@
             }
 
             .btnAtlTop {
-                top: 34vw;
+                top: 33.5vw;
             }
 
             .hero, .features, footer {
@@ -856,7 +856,7 @@
 
             .information {
                 margin-top: -2vw;
-                min-height: 414vw;
+                min-height: 390vw;
                 background: url('images/bg_body_mb2@4x.webp');
                 max-width: 100vw;
                 height: auto;
@@ -909,7 +909,7 @@
 
             .milk {
                 right: 27vw;
-                top: 492vw;
+                top: 468vw;
                 width: 46vw;
                 height: 60vw;
             }
@@ -1070,7 +1070,7 @@
 
             .event {
                 max-width: 100vw;
-                min-height: 314.16vw;
+                min-height: 294.16vw;
                 height: auto;
                 background: url('images/bg_body_mb4@2x.webp');
                 background-size: cover;
@@ -1103,7 +1103,7 @@
                 width: 91.67vw;
                 height: auto;
                 top: auto;
-                margin-top: 15vw;
+                margin-top: -8vw;
             }
 
             .swimming_goggles {
@@ -1111,8 +1111,7 @@
                 left: 1.5vw;
                 width: 91.67vw;
                 height: auto;
-                top: auto;
-            /
+                top: -8vw;
             }
 
             .swimming_buoy {
@@ -1120,7 +1119,7 @@
                 left: -4.8vw;
                 width: 95vw;
                 height: 90vw;
-                top: -25vw;
+                top: -42vw;
             }
 
             .end {
@@ -1141,7 +1140,7 @@
             }
 
             .btn_BuyWeb {
-                top: 1126vw;
+                top: 1064vw;
                 right: 35.2vw;
                 width: 30vw;
                 height: 8vw;
@@ -1151,7 +1150,7 @@
             }
 
             .btn_BuyAgent {
-                top: 1113vw;
+                top: 1076vw;
                 right: 15vw;
                 width: 30vw;
                 height: 8vw;
@@ -1162,7 +1161,7 @@
             }
 
             .btn_BuyShopee {
-                top: 1113vw;
+                top: 1076vw;
                 left: 15vw;
                 width: 30vw;
                 height: 8vw;
@@ -1235,7 +1234,7 @@
                 position: absolute;
                 object-fit: contain;
                 z-index: 10;
-                top: 362vw;
+                top: 348vw;
                 right: 43vw;
                 width: 10vw;
                 height: 10vw;
@@ -1245,7 +1244,7 @@
                 position: absolute;
                 object-fit: contain;
                 z-index: 10;
-                top: 562.5vw;
+                top: 540.5vw;
                 left: 46%;
                 width: 10vw;
                 height: 10vw;
@@ -1265,7 +1264,7 @@
                 position: absolute;
                 object-fit: contain;
                 z-index: 10;
-                top: 517vw;
+                top: 496vw;
                 left: 45%;
                 width: 10vw;
                 height: 10vw;
@@ -1280,7 +1279,7 @@
                 left: 33vw;
                 width: 42vw;
                 height: 16vw;
-                top: 548.5vw;
+                top: 528vw;
                 animation: float 3s ease-in-out infinite;
             }
 
@@ -1562,21 +1561,8 @@
     const modal = document.getElementById("imageModal");
     const modalImage = document.getElementById("modalImage");
 
-    thumbnails.forEach((thumb) => {
-        thumb.addEventListener("click", () => {
-            modalImage.src = thumb.dataset.full;
-            modal.style.display = "flex";
-        });
-    });
-
-    thumbnailsCT.forEach((thumb) => {
-        thumb.addEventListener("click", () => {
-            modalImage.src = thumb.dataset.full;
-            modal.style.display = "flex";
-        });
-    });
-
     function openModal(src) {
+        clearIntervals(); // Dừng lại khi mở modal
         modalImage.src = src;
         modal.style.display = "flex";
     }
@@ -1584,7 +1570,22 @@
     function closeModal() {
         modal.style.display = "none";
         modalImage.src = "";
+        if (window.innerWidth <= 480) {
+            startIntervals();
+        }
     }
+
+    thumbnails.forEach((thumb) => {
+        thumb.addEventListener("click", () => {
+            openModal(thumb.dataset.full);
+        });
+    });
+
+    thumbnailsCT.forEach((thumb) => {
+        thumb.addEventListener("click", () => {
+            openModal(thumb.dataset.full);
+        });
+    });
 
     // Slider for first track (img_review)
     let currentIndex = 0;
@@ -1650,14 +1651,23 @@
     updateSlider();
     updateSliderCT();
 
-    if (window.innerWidth <= 480) {
-        setInterval(() => {
+    let interval1, interval2;
+
+    function startIntervals() {
+        interval1 = setInterval(() => {
             nextSlide();
-        }, 4500)
-        setInterval(() => {
+        }, 4500);
+
+        interval2 = setInterval(() => {
             nextSlideCT();
-        }, 5000)
+        }, 5000);
     }
+
+    function clearIntervals() {
+        clearInterval(interval1);
+        clearInterval(interval2);
+    }
+
     // Make sure the sliders are positioned correctly on load
     window.addEventListener("load", function () {
         updateSlider();
