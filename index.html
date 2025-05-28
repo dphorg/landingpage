@@ -1318,13 +1318,12 @@
             href="https://doppelherz.vn/san-pham/tang-suc-de-khang/kinder-immune-syrup-combo-2-hop/"
     >
         <img
-                src="images/event_header.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>"
-                srcset="images/event_header@2x.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>"
+                src="images/event_header@2x.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>"
                 alt="bannerHeader"
                 class="bannerHeader"
         />
     </a>
-    <a href="https://doppelherz.vn/san-pham/tang-suc-de-khang/kinder-immune-syrup/">
+    <a href="https://doppelherz.vn/san-pham/tang-suc-de-khang/kinder-immune-syrup-combo-2-hop/">
         <img
                 src="images/btn_BuyandEvent@2x.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>"
                 alt="BuyandEvent"
@@ -1336,7 +1335,8 @@
     </a>
 </section>
 <section class="information" id="information">
-    <img src="images/fistChild@2x.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>" alt="fistChild" class="fistChild"/>
+    <img src="images/fistChild@2x.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>" alt="fistChild"
+         class="fistChild"/>
     <img
             src="images/second_child@2x.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>"
             alt="second_child"
@@ -1358,9 +1358,10 @@
         <img src="images/milk@2x.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>" alt="milk" class="milk"/>
     </a>
     <a
-            href="https://doppelherz.vn/san-pham/tang-suc-de-khang/kinder-immune-syrup/"
+            href="https://doppelherz.vn/san-pham/tang-suc-de-khang/kinder-immune-syrup-combo-2-hop/"
     >
-        <img src="./images/btn_ByNow@2x.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>" alt="milk" class="btn_ByNow"/>
+        <img src="./images/btn_ByNow@2x.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>" alt="milk"
+             class="btn_ByNow"/>
     </a>
     <a href="#features">
         <img
@@ -1481,7 +1482,7 @@
             />
         </a>
         <a
-                href="https://doppelherz.vn/san-pham/tre-em/thuc-pham-bao-ve-suc-khoe-kinder-optima/"
+                href="https://doppelherz.vn/danh-muc-san-pham/combo-khuyen-mai/"
         >
             <img
                     src="images/swimming_goggles@2x.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>"
@@ -1490,7 +1491,7 @@
             />
         </a>
         <a
-                href="https://doppelherz.vn/san-pham/bo-nao/thuc-pham-bao-ve-suc-khoe-doppelherz-aktiv-kinder-omega-3-syrup/"
+                href="https://doppelherz.vn/danh-muc-san-pham/combo-khuyen-mai/"
         >
             <img
                     src="images/swimming_buoy@2x.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>"
@@ -1511,12 +1512,14 @@
             />
         </a>
         <a href="https://doppelherz.vn/he-thong-phan-phoi/">
-            <img src="images/btn_BuyAgent@2x.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>" alt="" class="btn_BuyAgent"/>
+            <img src="images/btn_BuyAgent@2x.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>" alt=""
+                 class="btn_BuyAgent"/>
         </a>
         <a
-                href="https://doppelherz.vn/san-pham/tang-suc-de-khang/kinder-immune-syrup/"
+                href="https://doppelherz.vn/danh-muc-san-pham/combo-khuyen-mai/"
         >
-            <img src="images/btn_BuyWeb@2x.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>" alt="" class="btn_BuyWeb"/>
+            <img src="images/btn_BuyWeb@2x.webp?v=<?= time(); ?>?v=<?= time(); ?>?v=<?= time(); ?>" alt=""
+                 class="btn_BuyWeb"/>
         </a>
     </div>
 </section>
@@ -1574,6 +1577,12 @@
             startIntervals();
         }
     }
+
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    })
 
     thumbnails.forEach((thumb) => {
         thumb.addEventListener("click", () => {
